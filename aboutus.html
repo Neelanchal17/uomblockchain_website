@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/aboutus/block.css">
+    <link rel="stylesheet" href="/aboutus/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+ <div class="container">
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="/index.html">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="src/img/logo-removebg.png" alt="">
+                </div>
+                <div class="logo-text"></div>
+            </div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="/aboutus.html">About Us</a>
+                <a href="/events.html">Events</a>
+                <a href="/contactus.html">Contact Us</a>
+       
+          <button class="member-btn">
+              <a href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">Become a Member!</a>
+             </button>
+
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/aboutus.html">About Us</a>
+            <a href="/events.html">Events</a>
+            <a href="/contactus.html">Contact Us</a>
+            <a class="member-btn" href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">Become a Member!</a>
+        </div>
+        
+        <div class="overlay" id="overlay"></div>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <span>Meet Our Team</span>
+            <p>The Blockchain Association</p>
+            <p>
+                Meet the dedicated team behind the Blockchain Association, a group of driven students committed to fostering 
+                blockchain innovation and education. Our leadership brings together diverse expertise to create opportunities 
+                for collaboration, learning, and real-world impact in the blockchain space. And yes that was AI generated.
+            </p>
+            <!-- <div class="hero-btns">
+                <a href="#" class="btn primary-btn">Upcoming Events</a>
+                <a href="#" class="btn secondary-btn">View Projects</a>
+            </div> -->
+        </div>
+    
+         <section class="about-us">
+    <div class="content-part1-right">
+      <div class="team-member">
+        
+        <div class="member-card">
+          <img src="./aboutus/img/member1.jpg" alt="Tony Chen">
+          <h3 class="name">Tony Chen</h3>
+          <p class="role">President</p>
+        </div>
+
+        <div class="member-card">
+          <img src="./aboutus/img/member2.jpg" alt="Howard Wang">
+          <h3 class="name">Howard Wang</h3>
+          <p class="role">Vice President</p>
+        </div>
+
+        <div class="member-card">
+          <img src="./aboutus/img/member3.jpg" alt="Neelanchal Agarkar">
+          <h3 class="name">Neelanchal Agarkar</h3>
+          <p class="role">Secretary</p>
+        </div>
+
+        <div class="member-card">
+          <img src="./aboutus/img/member4.jpg" alt="Chengfeng Shang">
+          <h3 class="name">Chengfeng Shang</h3>
+          <p class="role">Treasurer</p>
+        </div>
+
+
+
+
+        <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+        
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
+<!-- 
+----------------------------------------- -->
+
+
+
+

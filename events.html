@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/events/main.css" />
+  <link rel="stylesheet" href="/events/navbar.css" />
+  <link rel="stylesheet" href="/events/events.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Events | Blockchain Association</title>
+</head>
+<body>
+
+<div class="container">
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="/index.html">
+      <div class="logo">
+        <div class="logo-icon">
+          <img src="/src/img/logo-removebg.png" alt="Logo" />
+        </div>
+        <div class="logo-text"></div>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="/aboutus.html">About Us</a>
+      <a href="/events.html">Events</a>
+      <a href="/contactus.html">Contact Us</a>
+      <button class="member-btn">
+        <a href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">
+          Become a Member!
+        </a>
+      </button>
+    </div>
+
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/aboutus.html">About Us</a>
+    <a href="/events.html">Events</a>
+    <a href="/contactus.html">Contact Us</a>
+    <a class="member-btn" href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">Become a Member!</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Events Hero -->
+  <header class="hero">
+    <span>Past Events</span>
+    <p class="subtitle">A quick look back at our exciting activities, competitions, and social gatherings.</p>
+  </header>
+
+  <!-- Events Content -->
+  <section class="events-section">
+    <div class="event-card">
+      <img src="./events/images/event1_1.jpg" alt="Information Session" />
+      <div class="event-content">
+        <h2>Information Session</h2>
+        <p>This event was organized on 22nd May, 2025. In this session, we introduced the club and discussed how to start investing in cryptocurrencies.</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="./events/images/event2 1.jpg" alt="Poker Tournament" />
+      <div class="event-content">
+        <h2>Poker Tournament</h2>
+        <p>This event was a poker tournament sponsored by Virgo Australia, a regulated crypto exchange in Australia.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('overlay');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+</script>
+</body>
+</html>

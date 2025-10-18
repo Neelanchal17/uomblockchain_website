@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/block.css">
+    <link rel="stylesheet" href="/src/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+ <div class="container">
+        <!-- Navigation Bar -->
+        <nav>
+             <a href="/index.html">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="src/img/logo-removebg.png" alt="">
+                </div>
+                <div class="logo-text"></div>
+            </div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="/aboutus.html">About Us</a>
+                <a href="/events.html">Events</a>
+                <a href="/contactus.html">Contact Us</a>
+       
+          <button class="member-btn">
+              <a href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">Become a Member!</a>
+             </button>
+
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/aboutus.html">About Us</a>
+            <a href="/events.html">Events</a>
+            <a href="/contactus.html">Contact Us</a>
+            <a class="member-btn" href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">Become a Member!</a>
+        </div>
+        
+        <div class="overlay" id="overlay"></div>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <span>The Blockchain Association</span>
+<p>University of Melbourne</p>
+            <p>Join our community of passionate developers, participate in hackathons, learn new technologies, and build innovative projects with students who are into gambling.</p>
+            <!-- <div class="hero-btns">
+                <a href="#" class="btn primary-btn">Upcoming Events</a>
+                <a href="#" class="btn secondary-btn">View Projects</a>
+            </div> -->
+        </div>
+        
+
+
+
+
+
+            <div class="container">
+        
+        <div class="grid">
+            <a href="/aboutus.html">
+            <div class="block">
+                <div class="block-icon">
+                    <i class="fas fa-comment"></i>
+                </div>
+                <h3 class="block-title">About Us</h3>
+                <p class="block-desc">Our Community is really special and we would like you to check it out ;)</p>
+            </div>
+            </a>
+            <a href="/events.html">
+            <div class="block">
+                <div class="block-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="block-title">Events</h3>
+                <p class="block-desc">Yes we host gatherings where we do the nerd talk about blockchains. Look into upcoming events</p>
+            </div>
+            </a>
+            <a href="/contactus.html">
+            <div class="block">
+                <div class="block-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="block-title">Contact Us!</h3>
+                <p class="block-desc">No we are not robots! You can contact us through this website</p>
+            </div>
+            </a>
+            <a href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">
+            <div class="block">
+                <div class="block-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="block-title">Become a Member</h3>
+                <p class="block-desc">Join our community to learn about the world of blockchain!</p>
+            </div>
+            </a>
+
+            </div>
+        
+
+            </div>
+        </div>
+        
+
+    </div>
+        
+
+
+        <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+        
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+<footer>This website was created with 🥰 by <a href="https://www.instagram.com/neel_agarkar/">Neel</a></footer>
+</html>
+<!-- 
+----------------------------------------- -->
+
+
+
+

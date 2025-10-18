@@ -1,0 +1,332 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(90deg, hsla(187, 100%, 97%, 1) 0%, hsla(211, 63%, 51%, 1) 100%);
+
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid a {
+            text-decoration: none;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #F9F3EF;
+            border-radius: 1.8em;
+            box-shadow: 0 8px 30px rgba(13, 59, 102, 0.3);
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            position: relative;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a:hover {
+            color: #1e70d4;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #1e70d4;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        .member-btn {
+background: linear-gradient(90deg,rgba(148, 140, 255, 1) 0%, rgba(18, 59, 181, 1) 0%, rgba(9, 226, 230, 1) 100%, rgba(72, 217, 202, 1) 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 201, 240, 0.4);
+        }
+
+        .member-btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(76, 201, 240, 0.6);
+        }
+
+        /* EIther keep the "become a member' button as white or black */
+        .member-btn a {
+            color: #F9F3EF;
+        }
+
+        /* ------------- */
+        .member-btn a:hover {
+            color: #f8f9fa;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            z-index: 1000;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: rgb(25, 105, 218);
+            margin: 6px 0;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: #0d3b66;
+            z-index: 900;
+            transition: all 0.4s ease;
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            padding: 100px 30px 30px;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: white;
+            padding-left: 10px;
+        }
+
+        .mobile-menu .member-btn {
+            margin-top: 30px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 800;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .hero span {
+            font-size: 3.5rem;
+            color: #0d3b66;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5c677d;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .primary-btn {
+            background: #0d3b66;
+            color: white;
+            box-shadow: 0 4px 15px rgba(13, 59, 102, 0.3);
+        }
+
+        .primary-btn:hover {
+            background: #0a2a4a;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            background: white;
+            color: #0d3b66;
+            border: 2px solid #0d3b66;
+        }
+
+        .secondary-btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            .nav-links {
+                gap: 25px;
+            }
+            
+            .nav-links a {
+                font-size: 16px;
+            }
+            
+            .member-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+
+        /* Animation for hamburger icon when active */
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #5c677d;
+            margin-top: 60px;
+        }

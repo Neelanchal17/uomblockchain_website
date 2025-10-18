@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/contactus/navbar.css">
+    <link rel="stylesheet" href="/contactus/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Contact Us</title>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar here (unchanged) -->
+          <nav>
+             <a href="/index.html">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="src/img/logo-removebg.png" alt="">
+                </div>
+                <div class="logo-text"></div>
+            </div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="/aboutus.html">About Us</a>
+                <a href="/events.html">Events</a>
+                <a href="/contactus.html">Contact Us</a>
+       
+          <button class="member-btn">
+              <a href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">Become a Member!</a>
+             </button>
+
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/aboutus.html">About Us</a>
+            <a href="/events.html">Events</a>
+            <a href="/contactus.html">Contact Us</a>
+            <a class="member-btn" href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/" target="_blank">Become a Member!</a>
+        </div>
+        
+        <div class="overlay" id="overlay"></div>
+        <div class="overlay" id="overlay"></div>
+        <!-- Contact Us Card -->
+        <div class="contact-card">
+            <span>Contact Us</span>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              
+                <input type="hidden" name="access_key" value="" />
+
+                <div class="contact-form-group">
+                    <label for="name" class="contact-form-label">Name</label>
+                    <input id="name" name="name" type="text" class="contact-form-input" required autocomplete="off" placeholder="Your Name">
+                </div>
+                <div class="contact-form-group">
+                    <label for="email" class="contact-form-label">Email Address</label>
+                    <input id="email" name="email" type="email" class="contact-form-input" required autocomplete="off" placeholder="your@email.com">
+                </div>
+                <div class="contact-form-group">
+                    <label for="message" class="contact-form-label">Message</label>
+                    <textarea id="message" name="message" class="contact-form-textarea" rows="6" required placeholder="How can we help you?"></textarea>
+                </div>
+                <button type="submit" class="contact-form-btn">Send Message</button>
+            </form>
+
+            <div class="contact-links" style="margin-top:20px;">
+                <a href="mailto:blockchainunimelb@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> blockchainunimelb@gmail.com</a>
+                <a href="https://www.instagram.com/uomblockchain/" target="_blank" class="contact-link"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://discord.com/invite/hpKYCeg3fU" target="_blank" class="contact-link"><i class="fab fa-discord"></i> Discord</a>
+            </div>
+        </div>
+    </div>
+     <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+        
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

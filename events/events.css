@@ -1,0 +1,90 @@
+/* Inherit shared base and nav styles from block.css and navbar.css if already imported */
+
+body {
+background: linear-gradient(90deg, hsla(187, 100%, 97%, 1) 0%, hsla(211, 63%, 51%, 1) 100%);
+  color: #0f2031;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.events-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.events-hero .subtitle {
+  color: #212b2f;
+  font-size: 1.15rem;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.events-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.event-card img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.event-content {
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #1e3d57;
+}
+
+.event-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-card img {
+    width: 100%;
+    height: auto;
+  }
+}
